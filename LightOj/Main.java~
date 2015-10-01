@@ -1,0 +1,45 @@
+import java.util.*;
+Public class Main
+{
+  Public static void main(String[]args)
+  {
+    Scanner abu=new Scanner(System.in);
+    int counter=abu.nextInt();
+    int input1=abu.nextInt();
+    int input2=abu.nextInt();
+    int output=0;
+    int count1=1;
+    while(count1<=counter)
+    {
+    for(int count=input1;count<=input2;count++)
+    {
+      int length=count.length();
+      int result=0;
+      if(count%5==0 || count%7==0)
+      {
+        
+        int loop=0;
+        while(loop<length)
+        {
+        
+        int mod=count%10;
+        int divide=count/10;
+        if(mod==5 || mod==7)
+        {
+          result++;
+        }
+        mod=divide;
+        loop++;
+        }
+      }
+      if(length==result)
+      {
+        output++;
+      }
+    }
+    System.out.prinntln("Case"+" "+count1+":"+" "+output);
+    }
+    
+    
+  }
+}
